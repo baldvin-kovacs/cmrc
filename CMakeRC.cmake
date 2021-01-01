@@ -376,7 +376,8 @@ public:
 #endif // CMRC_CMRC_HPP_INCLUDED
 ]==])
 
-set(cmrc_hpp "${CMRC_INCLUDE_DIR}/cmrc/cmrc.hpp" CACHE INTERNAL "")
+file(MAKE_DIRECTORY "${DEP_LIB_PREFIX}/include/cmrc")
+set(cmrc_hpp "${DEP_LIB_PREFIX}/include/cmrc/cmrc.hpp" CACHE INTERNAL "")
 set(_generate 1)
 if(EXISTS "${cmrc_hpp}")
     file(READ "${cmrc_hpp}" _current)
